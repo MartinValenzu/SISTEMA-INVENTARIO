@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sistema de Inventario: gestión de productos, existencias y movimientos. Proyecto de software con demostración interactiva.">
+  <meta name="theme-color" content="#07151e">
+  <title>Sistema de Inventario | Proyecto de Software</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="#inicio" aria-label="Sistema de Inventario, ir al inicio"><span class="brand-symbol" aria-hidden="true">▦</span> INVENT<span>TRACK</span></a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#funciones">Funciones</a>
+        <a href="#demo">Demostración</a>
+        <a href="#tecnologias">Tecnologías</a>
+      </nav>
+      <a class="nav-action" href="#demo">Ver demostración <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="live-dot" aria-hidden="true"></span> PROYECTO DE DESARROLLO DE SOFTWARE</span>
+          <h1>Tu inventario,<br><span>más organizado.</span></h1>
+          <p class="lead">Una solución pensada para registrar productos, consultar existencias y llevar el control de entradas y salidas en un solo lugar.</p>
+          <div class="hero-actions">
+            <a href="#demo" class="btn btn-primary">Explorar demostración <span aria-hidden="true">→</span></a>
+            <a href="#funciones" class="btn btn-secondary">Conocer funciones</a>
+          </div>
+          <div class="hero-note"><span aria-hidden="true">✦</span> Prototipo web disponible · Sistema completo pendiente de desarrollo</div>
+        </div>
+        <div class="hero-preview" aria-label="Ilustración de un panel de inventario">
+          <div class="preview-top"><span class="preview-title"><span aria-hidden="true">▦</span> Panel general</span><span class="preview-live">Vista de concepto</span></div>
+          <div class="preview-stat-grid">
+            <div class="preview-stat"><small>Productos registrados</small><strong>06</strong><span>Tipos de producto</span></div>
+            <div class="preview-stat alt"><small>Stock disponible</small><strong>83</strong><span>Unidades de ejemplo</span></div>
+          </div>
+          <div class="preview-caption">Productos recientes <span>Inventario de ejemplo</span></div>
+          <div class="preview-entry"><span class="product-glyph teal">▣</span><span>Portátil de oficina<small>TEC-001</small></span><b>08 uds.</b></div>
+          <div class="preview-entry"><span class="product-glyph purple">◈</span><span>Mouse inalámbrico<small>ACC-002</small></span><b>25 uds.</b></div>
+          <div class="preview-entry"><span class="product-glyph blue">⬡</span><span>Switch de red<small>RED-006</small></span><b class="low-number">02 uds.</b></div>
+          <div class="preview-foot">INTERFAZ DE PRESENTACIÓN <span aria-hidden="true">● ● ●</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features-section" id="funciones">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">FUNCIONALIDADES PREVISTAS</span><h2>Organización que <span>simplifica el trabajo.</span></h2><p>Estas son las herramientas que queremos desarrollar para el sistema completo.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card"><span class="feature-icon">▦</span><span class="feature-number">01</span><h3>Registro de productos</h3><p>Agregar, consultar, actualizar y organizar artículos con sus datos principales.</p></article>
+          <article class="feature-card"><span class="feature-icon purple-icon">▤</span><span class="feature-number">02</span><h3>Control de existencias</h3><p>Consultar cantidades disponibles y detectar productos con niveles de stock bajos.</p></article>
+          <article class="feature-card"><span class="feature-icon blue-icon">⇄</span><span class="feature-number">03</span><h3>Entradas y salidas</h3><p>Registrar movimientos para conocer cómo cambian las existencias.</p></article>
+          <article class="feature-card"><span class="feature-icon">⌕</span><span class="feature-number">04</span><h3>Búsqueda y filtros</h3><p>Localizar artículos por nombre, código y categoría.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demo" aria-labelledby="demo-title">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">PRUEBA LA INTERFAZ</span><h2 id="demo-title">Demostración <span>interactiva.</span></h2><p>Una primera versión para experimentar con un inventario sin instalar programas.</p></div>
+        <div class="demo-banner" role="note"><span aria-hidden="true">ⓘ</span><p><strong>Modo demostración:</strong> estos datos son de ejemplo. Los cambios se guardan solo en este navegador, no en MySQL ni en un servidor. No introduzcas información real o confidencial.</p></div>
+        <div class="dashboard" aria-label="Panel de inventario de demostración">
+          <div class="dashboard-header"><div><span class="dashboard-eyebrow">INVENTARIO / DEMO</span><h3>Vista general</h3><p>Productos y existencias del inventario de ejemplo</p></div><span class="demo-label"><span aria-hidden="true">●</span> DEMO LOCAL</span></div>
+          <div class="stats-grid" aria-live="polite">
+            <div class="stat-box"><span>Productos</span><strong id="total-products">0</strong><small>Referencias registradas</small></div>
+            <div class="stat-box"><span>Unidades</span><strong id="total-units">0</strong><small>Existencias totales</small></div>
+            <div class="stat-box warn"><span>Stock bajo</span><strong id="low-stock">0</strong><small>Productos por revisar</small></div>
+          </div>
+          <div class="table-top"><div><h4>Listado de productos</h4><p>Busca, registra y modifica existencias de ejemplo.</p></div><div class="toolbar"><button class="small-btn" id="export-button" type="button">↓ Exportar CSV</button><button class="small-btn primary" id="add-button" type="button">＋ Agregar producto</button></div></div>
+          <div class="filters"><label class="search-field"><span class="sr-only">Buscar por nombre o código</span><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Buscar por nombre o código..." autocomplete="off"></label><label class="category-field"><span class="sr-only">Filtrar por categoría</span><select id="category-select"><option value="">Todas las categorías</option></select></label></div>
+          <div class="table-scroll"><table><thead><tr><th scope="col">Código</th><th scope="col">Producto</th><th scope="col">Categoría</th><th scope="col">Precio</th><th scope="col">Stock</th><th scope="col">Estado</th><th scope="col">Ajustar stock</th></tr></thead><tbody id="products-body"></tbody></table></div>
+          <div class="dashboard-bottom"><span id="table-count" aria-live="polite"></span><button type="button" id="reset-button" class="reset-button">Restablecer demostración</button></div>
+          <p id="demo-feedback" class="demo-feedback" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section technology-section" id="tecnologias"><div class="container tech-layout"><div><span class="eyebrow">DESARROLLO DEL PROYECTO</span><h2>De la idea a un <span>sistema real.</span></h2><p>Esta página utiliza tecnologías web para mostrar una demostración. La aplicación completa podría incorporar una base de datos y una capa de servidor para guardar información compartida entre dispositivos.</p></div><div class="technology-list"><div><span class="tech-pill">HTML · CSS · JavaScript</span><div><h3>Demostración actual</h3><p>Interfaz y lógica de prueba en el navegador.</p></div></div><div><span class="tech-pill future">Python / API</span><div><h3>Backend propuesto</h3><p>Reglas de negocio, validación y acceso a datos.</p></div></div><div><span class="tech-pill future">MySQL</span><div><h3>Base de datos propuesta</h3><p>Persistencia de productos y movimientos.</p></div></div></div></div></section>
+
+    <section class="last-call"><div class="container last-call-inner"><div><span class="eyebrow">UN PROYECTO EN CONSTRUCCIÓN</span><h2>Un espacio para seguir mejorando.</h2><p>El objetivo es evolucionar esta demostración hasta convertirla en un sistema de inventario completo.</p></div><a class="btn btn-secondary" href="https://github.com/MartinValenzu" target="_blank" rel="noopener noreferrer">Ver perfil de GitHub <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-content"><a class="brand" href="#inicio"><span class="brand-symbol" aria-hidden="true">▦</span> INVENT<span>TRACK</span></a><p>Proyecto de software · Demostración web</p><p>© <span id="year"></span> InventTrack</p></div></footer>
+
+  <dialog id="product-dialog" class="product-dialog" aria-labelledby="dialog-title"><form id="product-form"><div class="dialog-head"><h2 id="dialog-title">Agregar producto</h2><button type="button" class="dialog-close" id="close-dialog" aria-label="Cerrar formulario">✕</button></div><p class="dialog-help">Este producto se guardará únicamente en tu navegador.</p><div class="form-grid"><label>Nombre del producto<input id="p-name" name="name" required maxlength="80" placeholder="Ej. Router inalámbrico"></label><label>Código<input id="p-code" name="code" required maxlength="24" placeholder="Ej. RED-007"></label><label>Categoría<select id="p-category" name="category" required><option value="Tecnología">Tecnología</option><option value="Accesorios">Accesorios</option><option value="Conectividad">Conectividad</option><option value="Redes">Redes</option><option value="Otros">Otros</option></select></label><label>Precio (COP)<input id="p-price" name="price" type="number" required min="0" max="999999999" step="1" value="0"></label><label>Unidades iniciales<input id="p-quantity" name="quantity" type="number" required min="0" max="999999" step="1" value="0"></label><label>Mínimo recomendado<input id="p-minimum" name="minimum" type="number" required min="0" max="999999" step="1" value="3"></label></div><p id="form-error" role="alert" class="form-error"></p><div class="dialog-actions"><button class="small-btn" id="cancel-button" type="button">Cancelar</button><button class="small-btn primary" type="submit">Guardar producto</button></div></form></dialog>
+</body>
+</html>
